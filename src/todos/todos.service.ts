@@ -28,8 +28,10 @@ export class TodosService {
     const index = this.todos.findIndex(todo => todo.id === Number(id));
     if (index < 0) {
       return throwError('Todo not found');
+    } else {
+      this.todos.splice(index, 1);
+      return of(true);
     }
-    return of(true);
   }
 
   updateTodo(todo: ITodo, id: string): Observable<ITodo> {
