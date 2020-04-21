@@ -20,8 +20,8 @@ describe('Todos Controller', () => {
     expect(controller).toBeDefined();
   });
 
-  describe('New environment', () => {
-    it('Should return empty array', () => {
+  describe('Clean environment - GET all todos and POST todo', () => {
+    it('should return empty array', () => {
       expect(controller.getAllTodos()).toMatchObject([]);
     });
 
@@ -37,7 +37,7 @@ describe('Todos Controller', () => {
 
   });
 
-  describe('', () => {
+  describe('GET DELETE and UPDATE todo by id', () => {
     const baseTodo: ITodo = {
       id: 1,
       title: 'firt todo',
